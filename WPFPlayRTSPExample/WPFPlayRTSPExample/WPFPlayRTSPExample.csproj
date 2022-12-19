@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net40</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\grid1.png" />
+    <None Remove="Images\grid2.png" />
+    <None Remove="Images\grid3.png" />
+    <None Remove="Images\grid4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WPFDevelopers" Version="1.0.9.6-preview" />
+    <PackageReference Include="WPFMediaKit" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DirectShowLib-2005">
+      <HintPath>..\..\..\..\..\WpfRtspApp\WpfRtspApp\bin\Debug\net40\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\grid1.png" />
+    <Resource Include="Images\grid2.png" />
+    <Resource Include="Images\grid3.png" />
+    <Resource Include="Images\grid4.png" />
+  </ItemGroup>
+</Project>

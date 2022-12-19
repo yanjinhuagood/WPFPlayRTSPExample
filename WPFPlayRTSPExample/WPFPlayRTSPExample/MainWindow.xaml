@@ -1,0 +1,71 @@
+﻿<wpfdev:Window x:Class="WPFPlayRTSPExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfdev="https://github.com/WPFDevelopersOrg/WPFDevelopers"
+        xmlns:controls="clr-namespace:WPFMediaKit.DirectShow.Controls;assembly=WPFMediaKit"
+        xmlns:local="clr-namespace:WPFPlayRTSPExample"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="WPFPlayRTSPExample" Height="450" Width="800">
+    <wpfdev:SixGirdView BorderThickness="1" SelectBrush="Red">
+        <wpfdev:SixGirdView.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="Border">
+                <Setter Property="Margin" Value="1"/>
+            </Style>
+            <Style TargetType="RadioButton">
+                <Setter Property="Margin" Value="1"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="RadioButton">
+                            <wpfdev:SmallPanel>
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}" 
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                <Border Background="{DynamicResource PrimaryNormalSolidColorBrush}"
+                                        VerticalAlignment="Top"
+                                        HorizontalAlignment="Left"
+                                        Padding="10,4"
+                                        CornerRadius="3"
+                                        Name="PART_Border"
+                                        Visibility="Collapsed">
+                                    <TextBlock Text="正在播放" Foreground="White"/>
+                                </Border>
+                            </wpfdev:SmallPanel>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter Property="Visibility" TargetName="PART_Border" Value="Visible"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </wpfdev:SixGirdView.Resources>
+        <controls:MediaUriElement x:Name="mediaUriElement" Margin="1"/>
+        <RadioButton DataContext="{Binding RtspModelCollection[0],RelativeSource={RelativeSource AncestorType=local:MainWindow}}"
+                     Checked="RadioButton_Checked" x:Name="rBtn1">
+            <Image Source="/Images/grid1.png"/>
+        </RadioButton>
+        <RadioButton DataContext="{Binding RtspModelCollection[1],RelativeSource={RelativeSource AncestorType=local:MainWindow}}"
+                     Checked="RadioButton_Checked">
+            <Image Source="/Images/grid2.png"/>
+        </RadioButton>
+        <RadioButton DataContext="{Binding RtspModelCollection[2],RelativeSource={RelativeSource AncestorType=local:MainWindow}}"
+                     Checked="RadioButton_Checked">
+            <Image Source="/Images/grid3.png"/>
+        </RadioButton>
+        <RadioButton DataContext="{Binding RtspModelCollection[3],RelativeSource={RelativeSource AncestorType=local:MainWindow}}"
+                     Checked="RadioButton_Checked">
+            <Image Source="/Images/grid4.png"/>
+        </RadioButton>
+        <Border Background="#282C34">
+            <TextBlock Text="无信号"/>
+        </Border>
+    </wpfdev:SixGirdView>
+</wpfdev:Window>

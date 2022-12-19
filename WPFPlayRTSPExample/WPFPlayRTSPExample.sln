@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPlayRTSPExample", "WPFPlayRTSPExample\WPFPlayRTSPExample.csproj", "{0BA4D5F8-7538-48E3-9453-4E6BA5ADF39D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BA4D5F8-7538-48E3-9453-4E6BA5ADF39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA4D5F8-7538-48E3-9453-4E6BA5ADF39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA4D5F8-7538-48E3-9453-4E6BA5ADF39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA4D5F8-7538-48E3-9453-4E6BA5ADF39D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8347F078-CDD5-46EB-8CB1-9F003CDB5A16}
+	EndGlobalSection
+EndGlobal
